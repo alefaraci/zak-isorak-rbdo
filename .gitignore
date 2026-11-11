@@ -1,0 +1,24 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments and tool caches
+.venv/
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Analysis outputs (results, logs, pickled problems, animations)
+examples/results/
+*.pickle
+*.log
+*.mov
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,19 @@
+# LINEAR STACKUP BENCHMARK
+
+# --------------------------
+RBDO:
+  rbdo:
+    batch_qmc: 7e5
+    size_mc: 5e6
+    Pf_thr: [2.275e-4, 2.275e-4]
+    CoV_thr: [0.05, 0.05]
+
+  ga:
+    n_gen: 500
+    n_ind: 256
+    tournament_size: 8
+    stdev: [0.24, 0.24]
+    mutation_probability: 0.2
+    cross_over_rate: 0.8
+    window: 75
+    improvement_max: 0.001

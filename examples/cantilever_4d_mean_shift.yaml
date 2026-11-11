@@ -1,0 +1,78 @@
+# CANTILEVER 4D BENCHMARK WITH MEAN SHIFT
+
+# --------------------------
+RBDO:
+  rbdo:
+    batch_qmc: 2e5
+    size_mc: 2e6
+    Pf_thr: [2.33e-4, 2.33e-4, 2.33e-4]
+    CoV_thr: [0.05, 0.05, 0.05]
+
+  ga:
+    n_gen: 300
+    n_ind: 128
+    tournament_size: 4
+    stdev: [0.25, 2.5, 0.33, 0.17, 0.25, 2.5, 0.33, 0.16]
+    mutation_probability: 0.2
+    cross_over_rate: 0.8
+    window: 25
+    improvement_max: 0.001
+
+# --------------------------
+ZAKRBDO:
+  gp:
+    covar_module: ["RBFKernel", "MaternKernel", "MaternKernel"]
+    batch_train_set: 40
+    size_candidate_global: 1e6
+    rho_thr: 0.99
+    eps_max_thr: 0.01
+
+  DBSCAN:
+    min_samples: 2
+    eps: 3.5
+
+  rbdo:
+    batch_qmc: 2e5
+    size_mc: 2e6
+    Pf_thr: [2.33e-4, 2.33e-4, 2.33e-4]
+    CoV_thr: [0.05, 0.05, 0.05]
+
+  ga:
+    n_gen: 300
+    n_ind: 256
+    tournament_size: 4
+    stdev: [0.25, 2.5, 0.33, 0.17, 0.25, 2.5, 0.33, 0.16]
+    mutation_probability: 0.2
+    cross_over_rate: 0.8
+    window: 50
+    improvement_max: 0.001
+
+# --------------------------
+ISORAKRBDO:
+  gp:
+    covar_module: ["RBFKernel", "MaternKernel", "MaternKernel"]
+    batch_train_set: 40
+    size_candidate_global: 1e6
+    rho_thr: 0.9
+    eps_max_thr: 0.01
+
+  DBSCAN:
+    min_samples: 2
+    eps: 3
+
+  rbdo:
+    batch_qmc: 5e4
+    size_mc: 5e5
+    Pf_thr: [2.33e-3, 2.33e-3, 2.33e-3]
+    CoV_thr: [0.05, 0.05, 0.05]
+
+  ga:
+    n_gen: 300
+    n_ind: 256
+    tournament_size: 4
+    stdev: [0.25, 2.5, 0.33, 0.17, 0.25, 2.5, 0.33, 0.16]
+    mutation_probability: 0.2
+    cross_over_rate: 0.8
+    window: 35
+    improvement_max: 0.001
+    alpha_init: 0.1

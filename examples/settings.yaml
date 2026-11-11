@@ -1,0 +1,12 @@
+# SETTINGS (shared by every benchmark)
+
+# Floating-point precision: "float16", "float32" or "float64".
+dtype: "float64"
+# Device used by PyTorch: "cpu", "cuda" or "mps".
+device: "cpu"
+# Number of Ray actors evaluating the population in parallel (1 disables parallel evaluation).
+num_actors: 8
+# Maximum number of solutions sent to an actor at once (null: one equal share per actor).
+subbatch_size: null
+# Fraction of a GPU reserved for each actor (null: none).
+num_gpus_per_actor: null

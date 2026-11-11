@@ -1,0 +1,65 @@
+line-length = 100
+indent-width = 4
+
+[lint]
+ignore = [
+    "ANN401",
+    "INP001",
+    "N803",
+    "N806",
+    "S101",
+    "PLR2004",
+    "E501",
+    "PGH003",
+    "ERA001",
+    "PLR0913",
+    "TID252",
+    "S603",
+    "SLF001",
+    "FA102",
+    "NPY002",
+    "PTH118",
+    "PTH122",
+    "S607",
+    "PERF203",
+    "BLE001",
+    "N802",
+    "PD011",
+    "ICN001",
+    "ANN001",
+    "S110",
+    "E722",
+    "D205",
+    "PLR0915",
+    "C901",
+    "N815",
+    "PLR0912",
+    "TD003",
+    "COM812",
+]
+select = ["ALL"]
+fixable = ["ALL"]
+unfixable = ["F401"]
+exclude = [
+    "examples/results",
+    "**/.venv",
+    "**/__pycache__",
+    "**/.*",
+]
+
+[lint.pydocstyle]
+convention = "google"
+
+[lint.isort]
+force-to-top = ["src"]
+from-first = true
+length-sort = true
+
+[format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+docstring-code-line-length = "dynamic"
+
+[lint.mccabe]
+max-complexity = 50

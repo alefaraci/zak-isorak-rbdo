@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the PhD thesis it was developed for."
+title: "zak: ZAK-RBDO and ISORAK-RBDO, zeroth-order adaptive-Kriging algorithms for Reliability-Based Design Optimization"
+type: software
+authors:
+  - family-names: Faraci
+    given-names: Alessio
+license: MIT
+repository-code: "https://github.com/alefaraci/zak-isorak-rbdo"
+keywords:
+  - reliability-based design optimization
+  - adaptive Kriging
+  - Gaussian process
+  - genetic algorithm
+  - structural reliability
+preferred-citation:
+  type: thesis
+  thesis-type: "PhD thesis"
+  title: "The use of machine learning and grey-box models to solve complex time-consuming RBDO problems"
+  authors:
+    - family-names: Faraci
+      given-names: Alessio
+  institution:
+    name: "Université Clermont Auvergne"
+  year: 2025

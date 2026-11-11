@@ -1,0 +1,90 @@
+# BRACKET STRUCTURE BENCHMARK
+
+# --------------------------
+DDO:
+  ga:
+    n_gen: 500
+    n_ind: 512
+    tournament_size: 16
+    stdev: [4.16, 4.16, 4.16]
+    mutation_probability: 0.2
+    cross_over_rate: 0.8
+    window: 50
+    improvement_max: 0.005
+
+# --------------------------
+RBDO:
+  rbdo:
+    batch_qmc: 5e4
+    size_mc: 5e4
+    Pf_thr: [2.275e-2, 2.275e-2]
+    CoV_thr: [0.05, 0.05]
+
+  ga:
+    n_gen: 500
+    n_ind: 256
+    tournament_size: 8
+    stdev: [4.16, 4.16, 4.16]
+    mutation_probability: 0.2
+    cross_over_rate: 0.8
+    window: 50
+    improvement_max: 0.005
+
+# --------------------------
+ZAKRBDO:
+  gp:
+    covar_module: ["MaternKernel", "MaternKernel"]
+    batch_train_set: 50
+    size_candidate_global: 1e6
+    rho_thr: 0.99
+    eps_max_thr: 0.03
+
+  DBSCAN:
+    min_samples: 2
+    eps: 2
+
+  rbdo:
+    batch_qmc: 3e4
+    size_mc: 5e4
+    Pf_thr: [2.275e-2, 2.275e-2]
+    CoV_thr: [0.05, 0.05]
+
+  ga:
+    n_gen: 300
+    n_ind: 128
+    tournament_size: 4
+    stdev: [3.16, 3.16, 3.16]
+    mutation_probability: 0.15
+    cross_over_rate: 0.8
+    window: 50
+    improvement_max: 0.001
+
+# --------------------------
+ISORAKRBDO:
+  gp:
+    covar_module: ["MaternKernel", "RBFKernel"]
+    batch_train_set: 50
+    size_candidate_global: 1e5
+    rho_thr: 0.97
+    eps_max_thr: 0.05
+
+  DBSCAN:
+    min_samples: 2
+    eps: 1.75
+
+  rbdo:
+    batch_qmc: 1e4
+    size_mc: 5e4
+    Pf_thr: [2.275e-2, 2.275e-2]
+    CoV_thr: [0.05, 0.05]
+
+  ga:
+    n_gen: 300
+    n_ind: 64
+    tournament_size: 4
+    stdev: [4.16, 4.16, 4.16]
+    mutation_probability: 0.2
+    cross_over_rate: 0.8
+    window: 30
+    improvement_max: 0.002
+    alpha_init: 0.3
