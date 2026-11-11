@@ -2,7 +2,7 @@
 
 **Zeroth-order, adaptive-Kriging algorithms for Reliability-Based Design Optimization (RBDO).**
 
-Research code of the PhD thesis
+Research code of the PhD thesis:
 
 > A. Faraci, *The use of machine learning and grey-box models to solve complex time-consuming RBDO
 > problems*, Université Clermont Auvergne, 2025.
